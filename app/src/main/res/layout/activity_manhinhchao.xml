@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/chao">
+    <ImageView
+        android:layout_marginTop="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/logo1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginTop="30dp"
+        android:background="#F17125"
+        android:gravity="center"
+        android:text="Thư Viện LibMana"
+        android:textColor="#F7FAF9"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="60dp"
+        android:src="@drawable/chao2"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:text="ĐẠI BÀNG(Rocket)"
+        android:textColor="#F07125"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

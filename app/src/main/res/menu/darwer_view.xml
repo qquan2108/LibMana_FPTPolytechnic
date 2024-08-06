@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/trangchu"
+            android:icon="@drawable/home"
+            android:title="Trang chủ"/>
+        <item
+            android:id="@+id/qlsach"
+            android:icon="@drawable/iconboook"
+            android:title="Quản lý sách"/>
+        <item
+            android:id="@+id/qlloaisach"
+            android:icon="@drawable/bookl"
+            android:title="Quản lý loại sách"/>
+        <item
+            android:id="@+id/qlthanhvien"
+            android:icon="@drawable/tv1"
+            android:title="Quản lý thành viên"/>
+        <item
+            android:id="@+id/qlphieumuon"
+            android:icon="@drawable/iconticker"
+            android:title="Quản lý phiếu mượn"/>
+        <item
+            android:id="@+id/CTPM"
+            android:icon="@drawable/notepad"
+            android:title="Chi tiết phiếu mượn"/>
+        <item
+            android:id="@+id/gioithieu"
+            android:icon="@drawable/gt"
+            android:title="Giới thiệu"/>
+        <item
+            android:id="@+id/thongke"
+            android:icon="@drawable/thongke1"
+            android:title="Thống kê"/>
+        <item
+            android:id="@+id/sachfree"
+            android:icon="@drawable/free"
+            android:title="Sách miễn phí"/>
+
+        <item android:title="Khác">
+            <menu>
+                <item
+                    android:id="@+id/caidat"
+                    android:icon="@drawable/doimk"
+                    android:title="Đổi mật khẩu"/>
+                <item
+                    android:id="@+id/dangxuat"
+                    android:icon="@drawable/logout"
+                    android:title="Đăng xuất"/>
+
+
+            </menu>
+
+        </item>
+
+
+
+
+    </group>
+</menu>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/abv"
+    tools:context=".Dangky">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="#F36A3E"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="182dp"
+        android:layout_margin="20dp"
+
+        app:srcCompat="@drawable/logo1" />
+
+    <EditText
+
+        android:id="@+id/ettendangnhap"
+        android:background="@drawable/rounded_edittext_bg"
+
+        android:layout_marginLeft="10dp"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:padding="10dp"
+       android:hint="Tên đăng nhập" />
+
+
+
+    <EditText
+        android:id="@+id/etpassword"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/rounded_edittext_bg"
+        android:layout_marginLeft="10dp"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Mật khẩu"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/etnhaplaimatkhau"
+        android:padding="10dp"
+        android:background="@drawable/rounded_edittext_bg"
+        android:layout_marginLeft="10dp"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Nhập lại mật khẩu"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/ettennguoidung"
+        android:background="@drawable/rounded_edittext_bg"
+        android:layout_marginLeft="10dp"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:hint="Tên người dùng" />
+
+    <EditText
+        android:id="@+id/etsdt"
+
+        android:background="@drawable/rounded_edittext_bg"
+        android:layout_marginLeft="10dp"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:padding="10dp"
+        android:hint="Số điện thoại" />
+    <EditText
+        android:id="@+id/etdiachi"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_edittext_bg"
+        android:layout_marginLeft="10dp"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:padding="10dp"
+        android:hint="Địa chỉ" />
+
+    <Button
+        android:id="@+id/btdangky"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="45px"
+        android:layout_marginLeft="150dp"
+
+        android:backgroundTint="#F17125"
+        android:text="Đăng ký"
+        android:textColor="#190202" />
+
+</LinearLayout>

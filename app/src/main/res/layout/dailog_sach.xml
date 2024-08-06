@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+
+    android:id="@+id/cardviewdailog">
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="380dp">
+        <TextView
+            android:id="@+id/txttieude"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THÊM  SÁCH"
+            android:textAllCaps="true"
+            android:textColor="#FF9800"
+            android:textSize="30dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:id="@+id/ettensach"
+            android:background="@drawable/buttonbogoc_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập tên sách"/>
+        <EditText
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:id="@+id/ettacgia"
+            android:background="@drawable/buttonbogoc_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập tên tác giả"/>
+        <EditText
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:id="@+id/ettienthue"
+            android:background="@drawable/buttonbogoc_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập tiền thuê"/>
+        <EditText
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:id="@+id/ettenloai"
+            android:background="@drawable/buttonbogoc_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập mã thể loại"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btluu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="THÊM"
+                android:backgroundTint="#FE9700"/>
+            <Button
+                android:id="@+id/bthuy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="HỦY"
+                android:backgroundTint="#FE9700"/>
+
+            />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

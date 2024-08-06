@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#83B7BD"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHƯƠNG 1"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        android:textStyle="bold">
+
+    </TextView>
+    <TextView
+        android:padding="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="    Cứ theo truyền thuyết Trung Hoa thì kẻ sanh trước loài người là ông Bàn Cổ làm chúa thiên hạ. Kế đó là vua Thiên Hoàng, Ðịa Hoàng và Nhơn Hoàng, gọi là Tam Hoàng. Rồi đến vua Phục Hi, Thần Nông, Huỳnh, Nghiêu và Thuấn gọi là Ngũ Ðế."
+        android:textSize="15dp"
+
+        android:textStyle="bold">
+
+    </TextView>
+    <TextView
+        android:padding="15dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="    Thuở ấy, Trung quốc chia làm bốn châu: Ðông Thắng Thần châu, Tây Ngưu Hạ châu, Nam Thiện Bộ châu, Bắc Cư Lư châu."
+        android:textStyle="bold">
+
+    </TextView>
+    <TextView
+        android:padding="15dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="    Ðặc biệt là nơi ven biển lại có một nước tên Ngao Lai. Trong nước ấy có một hòn núi gọi là Hoa Quả Sơn (Núi có nhiều thứ hoa quả lạ) đứng sừng sững giữa trời, bao phủ đồi cây gò đất. Trong cảnh hùng tráng âm u ấy có một tảng đá rất lớn, bề cao ba mươi sáu thước năm tấc, chu vi hai mươi bốn thước, trên mặt có chín lỗ thông thiên, bốn bên có tám hang thông ra rừng rậm!"
+        android:textStyle="bold">
+
+    </TextView>
+    <TextView
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="    Thật là một tảng đá dị thường, Cấu Tạo từ thuở khai thiên lập địa mà loài người không ai có thể tưởng tượng nổi. Với chiều cao vượt lên muôn vật trên mặt đất ấy tảng đá không bị che khuất, hứng chịu sức nóng và lạnh của nhật nguyệt, lần lần tụ tinh nứt ra một viên trứng đá."
+
+        android:textStyle="bold">
+
+    </TextView>
+    <TextView
+        android:padding="15dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="    Trong lâu năm, trứng ấy tượng hình, rồi gặp một trận gió lớn nỡ ra một con Khỉ đá, giống tạc hình người, đủ tai, mắt, miệng, mũi và tay chân rất lanh lẹ.
+"
+        android:textStyle="bold">
+
+    </TextView>
+
+
+    <TextView
+        android:padding="15dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="    Gặp lúc Ngọc Hoàng đang ngự nơi Linh Tiêu điện, thấy hào quang từ địa giới chói lên lấy làm lạ, sai thiên thần đến hỏi:"
+        android:textStyle="bold">
+
+    </TextView>
+
+</LinearLayout>

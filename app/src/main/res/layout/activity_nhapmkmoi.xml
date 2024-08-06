@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".nhapmkmoi">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="180dp"
+        android:text="Nhập mật khẩu mới "
+        android:textColor="#F86807"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_marginTop="70dp"
+
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/et_matkhau_moi"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Nhập mật khẩu mới"
+        />
+
+    <EditText
+        android:layout_margin="40dp"
+        android:id="@+id/et_nhaplai_matkhau_moi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Nhập lại mật khẩu"/>
+
+    <Button
+        android:backgroundTint="#FF5722"
+        android:id="@+id/btn_xacnhan_mk_moi"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xác nhận" />
+</LinearLayout>

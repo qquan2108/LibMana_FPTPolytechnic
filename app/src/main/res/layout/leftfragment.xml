@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DA6F6F"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mời bạn đọc cuốn sách "
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:textColor="#FFC907"
+        android:textStyle="bold">
+
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tôn Ngộ Không Đại náo thiên cung"
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ngokhong"
+        >
+
+    </ImageView>
+
+</LinearLayout>
