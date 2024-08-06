@@ -16,7 +16,7 @@
 
 1. **Clone repository**:
     ```bash
-    git clone https://github.com/qquan2108/Duanmaunhom1.git
+    git clone https://github.com/qquan2108/LibMana_FPTPolytechnic.git
     ```
 2. **Đi tới thư mục dự án**:
     ```bash
