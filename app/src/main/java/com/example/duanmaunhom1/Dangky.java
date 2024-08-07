@@ -70,7 +70,6 @@ public class Dangky extends AppCompatActivity {
                     Toast.makeText(Dangky.this, "Chưa nhập tên người dùng", Toast.LENGTH_SHORT).show();
                 } else if (phone.isEmpty()) {
                     Toast.makeText(Dangky.this, "Chưa nhập số điện thoại", Toast.LENGTH_SHORT).show();
-
                 } else if (diachi.isEmpty()) {
                     Toast.makeText(Dangky.this, "Chưa nhập địa chỉ", Toast.LENGTH_SHORT).show();
                 } else {

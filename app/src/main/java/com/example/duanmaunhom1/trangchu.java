@@ -83,7 +83,9 @@ public class trangchu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(trangchu.this, DangNhap.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
+                finish();
             }
         });
         qlsach.setOnClickListener(new View.OnClickListener() {

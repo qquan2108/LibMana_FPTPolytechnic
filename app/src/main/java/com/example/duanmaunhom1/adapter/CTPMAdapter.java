@@ -51,8 +51,10 @@ public class CTPMAdapter extends RecyclerView.Adapter<CTPMAdapter.ViewHolder> {
         holder.txtmapm.setText("Mã Phiếu Mượn: " + item.getMapm());
         holder.txtMaSach.setText("Mã Sách: " + item.getMasach());
         holder.txtSoLuong.setText("Số Lượng: " + item.getSoluong());
-        holder.txtTenSach.setText("Tên Sách: " + item.getTensach());
 
+        // Lấy tên sách từ mã sách và hiển thị
+        String tenSach = CTPMDAO.getBookNameById(item.getMasach());
+        holder.txtTenSach.setText("Tên Sách: " + tenSach);
 
         // Kiểm tra trạng thái của sách và cập nhật thông tin hiển thị
         String trangThai;
@@ -64,17 +66,10 @@ public class CTPMAdapter extends RecyclerView.Adapter<CTPMAdapter.ViewHolder> {
             holder.btntrasach.setVisibility(View.VISIBLE); // Hiển thị nút trả sách nếu sách chưa được trả
         }
 
-// Cập nhật giao diện với trạng thái mới
+        // Cập nhật giao diện với trạng thái mới
         holder.txttrangthai.setText("Trạng Thái: " + trangThai);
-
-// Debug log để kiểm tra giá trị của trạng thái
+        // Debug log để kiểm tra giá trị của trạng thái
         Log.d("CTPMAdapter", "Trang Thai value: " + item.getTrasach() + " - " + trangThai);
-
-
-        holder.txttrangthai.setText("Trạng Thái: " + trangThai);
-        holder.btntrasach.setVisibility(item.getTrasach() == 0 ? View.VISIBLE : View.GONE);
-
-        Log.d("CTPMAdapter", "Trangthai value: " + item.getTrasach() + " - " + trangThai);
 
         holder.btntrasach.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +80,7 @@ public class CTPMAdapter extends RecyclerView.Adapter<CTPMAdapter.ViewHolder> {
                     item.setTrasach(1);
                     // Thông báo thay đổi dữ liệu để cập nhật lại giao diện
                     notifyItemChanged(holder.getAdapterPosition());
+                    loaddata();
                     Toast.makeText(context, "Thay đổi trạng thái thành công", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(context, "Thay đổi trạng thái không thành công", Toast.LENGTH_SHORT).show();
@@ -106,6 +102,7 @@ public class CTPMAdapter extends RecyclerView.Adapter<CTPMAdapter.ViewHolder> {
             }
         });
     }
+
 
     @Override
     public int getItemCount() {

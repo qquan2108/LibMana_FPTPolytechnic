@@ -84,7 +84,7 @@ public class CTPM extends AppCompatActivity {
     private void filterListByReturned() {
         filteredList.clear(); // Xóa danh sách lọc hiện tại
         for (CTPhieuMuon chiTietPhieuMuon : CTPMDAO.getCTPM()) {
-            if (chiTietPhieuMuon.getTrasach()== 1) { // Kiểm tra trạng thái trả sách
+            if (chiTietPhieuMuon.getTrasach()== 0) { // Kiểm tra trạng thái trả sách
                 filteredList.add(chiTietPhieuMuon); // Thêm phiếu mượn đã trả vào danh sách lọc
             }
         }

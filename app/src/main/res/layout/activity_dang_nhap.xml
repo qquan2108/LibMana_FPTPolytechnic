@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".DangNhap"
-    android:background="@drawable/abv"
+    android:background="@drawable/background"
     >
 
 

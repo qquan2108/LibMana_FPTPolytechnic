@@ -153,9 +153,6 @@ public class trangchufragment1 extends Fragment {
             }
         });
 
-
-
-
         return v;
 
     }

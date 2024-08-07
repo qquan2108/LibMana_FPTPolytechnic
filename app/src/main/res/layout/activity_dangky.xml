@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/abv"
+    android:background="@drawable/background"
     tools:context=".Dangky">
 
     <androidx.appcompat.widget.Toolbar
@@ -20,21 +20,17 @@
         android:background="#F36A3E"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="182dp"
         android:layout_margin="20dp"
-
         app:srcCompat="@drawable/logo1" />
 
     <EditText
 
         android:id="@+id/ettendangnhap"
         android:background="@drawable/rounded_edittext_bg"
-
         android:layout_marginLeft="10dp"
         android:layout_width="390dp"
         android:layout_height="50dp"

@@ -1,10 +1,10 @@
 package com.example.duanmaunhom1.DAO;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 
 import com.example.duanmaunhom1.database.DbHelper;
 import com.example.duanmaunhom1.model.CTPhieuMuon;
@@ -15,13 +15,10 @@ public class ChiTietpmDAO {
 
     private DbHelper dbHelper;
 
-    public ChiTietpmDAO(Context context){
+    public ChiTietpmDAO(Context context) {
         dbHelper = new DbHelper(context);
-
     }
 
-    // llay danh sach cac cuon sach
-//  // SELECT ct.mactpm , ct.mapm, ct.masach, ct.soluong, s.tensach  FROM SACH s , CTPM ct WHERE s.masach = ct.masach
     public ArrayList<CTPhieuMuon> getCTPM(){
         ArrayList<CTPhieuMuon> list = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
@@ -35,41 +32,46 @@ public class ChiTietpmDAO {
         return list;
 
     }
-    public boolean themctpm(int mapm, int masach, int soluong){
+
+    @SuppressLint("Range")
+    public String getBookNameById(int bookId) {
+        String bookName = null;
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT tensach FROM SACH WHERE masach = ?", new String[]{String.valueOf(bookId)});
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                bookName = cursor.getString(cursor.getColumnIndex("tensach"));
+            }
+            cursor.close();
+        }
+        return bookName;
+    }
+
+    public boolean themctpm(int mapm, int masach, int soluong) {
         SQLiteDatabase sqLiteDatabase = dbHelper.getWritableDatabase();
-
-
         ContentValues contentValues = new ContentValues();
-        contentValues.put("mapm",mapm);
-        contentValues.put("masach",masach);
-        contentValues.put("soluong",soluong);
-
-
-        long check = sqLiteDatabase.insert("CTPM",null,contentValues);
-//        if (check == -1) {
-//            return false;
-//        }else {
-//            return true;
-//        }
+        contentValues.put("mapm", mapm);
+        contentValues.put("masach", masach);
+        contentValues.put("soluong", soluong);
+        long check = sqLiteDatabase.insert("CTPM", null, contentValues);
         return check != -1;
     }
 
-    public boolean suaCTPM(CTPhieuMuon ctPhieuMuon){
+    public boolean suaCTPM(CTPhieuMuon ctPhieuMuon) {
         SQLiteDatabase sqLiteDatabase = dbHelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-
-        contentValues.put("mapm",ctPhieuMuon.getMapm());
-        contentValues.put("masach",ctPhieuMuon.getMasach());
-        contentValues.put("soluong",ctPhieuMuon.getSoluong());
-
-
-        int check = sqLiteDatabase.update("CTPM",contentValues,"mactpm = ?",new String[]{ctPhieuMuon.getMactpm()+""});
+        contentValues.put("mapm", ctPhieuMuon.getMapm());
+        contentValues.put("masach", ctPhieuMuon.getMasach());
+        contentValues.put("soluong", ctPhieuMuon.getSoluong());
+        int check = sqLiteDatabase.update("CTPM", contentValues, "mactpm = ?", new String[]{String.valueOf(ctPhieuMuon.getMactpm())});
         return check != 0;
     }
-    public void xoactpm(int mactpm){
-        SQLiteDatabase db= dbHelper.getWritableDatabase();
-        db.delete("CTPM","mactpm=?",new String[]{mactpm+""});
+
+    public void xoactpm(int mactpm) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db.delete("CTPM", "mactpm=?", new String[]{String.valueOf(mactpm)});
     }
+
     public boolean thaydoitrangthai(int mactpm) {
         SQLiteDatabase sqLiteDatabase = dbHelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -77,18 +79,6 @@ public class ChiTietpmDAO {
         int rowsAffected = sqLiteDatabase.update("CTPM", contentValues, "mactpm = ?", new String[]{String.valueOf(mactpm)});
         return rowsAffected > 0; // Kiểm tra xem có bản ghi nào được cập nhật không
     }
-//    public ArrayList<CTPhieuMuon> getCTPM() {
-//        ArrayList<CTPhieuMuon> list = new ArrayList<>();
-//        SQLiteDatabase db = dbHelper.getReadableDatabase();
-//        Cursor cursor = db.query("CTPM", null, null, null, null, null, null);
-//        if (cursor.moveToFirst()) {
-//            do {
-//                // Đọc dữ liệu từ cursor và thêm vào danh sách
-//            } while (cursor.moveToNext());
-//        }
-//        cursor.close();
-//        return list;
-//    }
+}
 
-    }
 
