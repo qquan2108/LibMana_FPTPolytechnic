@@ -20,7 +20,7 @@
     ```
 2. **Đi tới thư mục dự án**:
     ```bash
-    cd Duanmaunhom1
+    cd LibMana_FPTPolytechnic
     ```
 3. **Mở dự án bằng Android Studio**:
     - Chọn "Open an existing Android Studio project" và điều hướng đến thư mục dự án.
@@ -58,7 +58,7 @@ Chúng tôi hoan nghênh mọi sự đóng góp để cải thiện Ứng Dụng
 Dự án này được cấp phép theo giấy phép MIT. Xem tệp [LICENSE](LICENSE) để biết thêm chi tiết.
 
 ## Liên Hệ
-Nếu bạn có bất kỳ câu hỏi nào hoặc cần hỗ trợ, vui lòng liên hệ chúng tôi tại [support@example.com](mailto:support@example.com).
+Nếu bạn có bất kỳ câu hỏi nào hoặc cần hỗ trợ, vui lòng liên hệ chúng tôi tại [quantvqps39683@gmail.com](mailto: quantvqps39683@gmail.com).
 
 ---
 
