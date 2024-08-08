@@ -172,7 +172,7 @@ public class ThanhVienAdapter extends RecyclerView.Adapter<ThanhVienAdapter.View
                     loaddata();
                     alertDialog.dismiss();
                 }else {
-                    Toast.makeText(context, "cap nhat that bai", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "cập nhật thất bại", Toast.LENGTH_SHORT).show();
                 }
             }
 

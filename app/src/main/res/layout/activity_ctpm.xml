@@ -13,12 +13,10 @@
         android:id="@+id/filterReturned"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="718dp"
+        android:layout_marginTop="650dp"
         android:src="@drawable/filter" />
 
     <androidx.appcompat.widget.Toolbar
@@ -34,7 +32,6 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerCTPM"
-
         android:layout_width="match_parent"
         android:layout_height="725dp"
         android:layout_alignParentEnd="true"
@@ -48,7 +45,8 @@
         android:src="@drawable/them_add_24"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_margin="20dp"
+        android:layout_margin="26dp"
+        android:layout_marginTop="650dp"
         />
 
 </RelativeLayout>

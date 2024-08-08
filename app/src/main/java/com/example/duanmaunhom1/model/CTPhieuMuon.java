@@ -59,9 +59,7 @@ public class CTPhieuMuon {
         this.tensach = tensach;
     }
 
-    public int getTrasach() {
-        return trasach;
-    }
+    public int getTrasach() { return trasach; }
 
     public void setTrasach(int trasach) {
         this.trasach = trasach;

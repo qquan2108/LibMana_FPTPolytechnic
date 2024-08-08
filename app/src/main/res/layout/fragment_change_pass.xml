@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:maxLines="1"
-            android:hint="Mat khau cu"/>
+            android:hint="Mật khẩu cũ"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:maxLines="1"
-            android:hint="Mat khau"/>
+            android:hint="Mật khẩu mới"/>
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:maxLines="1"
-            android:hint="Nhap lai mat khau"/>
+            android:hint="Nhập lại mật khẩu"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -72,7 +72,7 @@
         android:id="@+id/bntsave"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="Luu"
+        android:text="Lưu"
         android:textSize="20dp"
         android:drawableStart="@drawable/save"
         android:layout_marginLeft="50dp">
@@ -82,7 +82,7 @@
         android:id="@+id/bthuy"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="Huy"
+        android:text="Hủy"
         android:textSize="20dp"
         android:drawableStart="@drawable/save"
         android:layout_marginLeft="110dp">

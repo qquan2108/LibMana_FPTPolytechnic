@@ -16,25 +16,26 @@
         android:layout_marginTop="30dp"
         android:background="#F17125"
         android:gravity="center"
-        android:text="Thư Viện LibMana"
+        android:text="Phương Nam Library"
         android:textColor="#F7FAF9"
         android:textSize="30dp"
         android:textStyle="bold" />
+
     <ImageView
         android:id="@+id/iv1"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="60dp"
-        android:src="@drawable/chao2"
         android:layout_width="300dp"
         android:layout_height="200dp"
-        />
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/chao2" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="63dp"
         android:background="#FFFFFF"
         android:gravity="center"
-        android:text="ĐẠI BÀNG(Rocket)"
+        android:text="Nhóm 1: ĐẠI BÀNG"
         android:textColor="#F07125"
         android:textSize="30dp"
         android:textStyle="bold" />

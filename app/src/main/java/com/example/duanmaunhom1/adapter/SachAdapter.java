@@ -52,6 +52,7 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder>{
         holder.txtTacGia.setText("Tác giả: " + list.get(position).getTacgia());
         holder.txtGiaBan.setText("Giá bán: " + list.get(position).getGiaban());
         holder.txtTenloai.setText("Thể loại: " + list.get(position).getTenloai());
+
         holder.ivedit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,7 +71,6 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder>{
                     public void onClick(DialogInterface dialog, int which) {
                         int check = sachDAO.xoassach(list.get(holder.getAdapterPosition()).getMasach());
                         switch (check){
-
                             case -1:
                                 Toast.makeText(context, "Xóa thất bại", Toast.LENGTH_SHORT).show();
                                 break;
@@ -81,11 +81,8 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder>{
                                 Toast.makeText(context, "Xóa thành công", Toast.LENGTH_SHORT).show();
                                 loaddata();
                                 break;
-
-
                         }
                     }
-
                 });
                 builder.setNegativeButton("Không", null);
                 AlertDialog alertDialog = builder.create();

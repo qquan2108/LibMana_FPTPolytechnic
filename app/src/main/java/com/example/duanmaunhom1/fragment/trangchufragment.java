@@ -88,8 +88,6 @@ public class trangchufragment extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-
-
                 int id = menuItem.getItemId();
 
                 Fragment fragment = null;

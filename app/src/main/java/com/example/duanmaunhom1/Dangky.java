@@ -36,7 +36,7 @@ public class Dangky extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("Thư viện LibMana");
+        getSupportActionBar().setTitle("Đăng kí tài khoản");
 
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
@@ -84,7 +84,6 @@ public class Dangky extends AppCompatActivity {
                 }
             }
         });
-
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
