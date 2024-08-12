@@ -17,15 +17,10 @@ TextView tv;
         super.onCreate(savedInstanceState);
     }
 
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.rightfragment,container,false);
-        
-
-
-
         return v;
     }
     public void gantext(String x){

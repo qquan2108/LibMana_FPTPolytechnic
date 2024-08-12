@@ -87,13 +87,6 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder>{
                 builder.setNegativeButton("Không", null);
                 AlertDialog alertDialog = builder.create();
                 alertDialog.show();
-//                int position = holder.getAdapterPosition();
-//                int masach = list.get(position).getMasach();
-//                sachDAO.xoassach(masach);
-//                list.remove(position);
-//                notifyItemRemoved(position);
-//                notifyItemRangeChanged(position, list.size());
-//                Toast.makeText(context, "Xóa sách thành công", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -146,6 +139,7 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder>{
         edtTenSach.setText(sach.getTensach());
         edTacGia.setText(sach.getTacgia());
         edtTienthue.setText(String.valueOf(sach.getGiaban()));
+
         btnHuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -156,16 +150,8 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder>{
             @Override
             public void onClick(View v) {
                 String tenSach = edtTenSach.getText().toString();
-//                if (tenSach.equals("")){
-//                    Toast.makeText(SachActivity.this, "Nhap ten sach", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
                 String tacGia = edTacGia.getText().toString();
-//                if (tacGia.equals("")){
-//                    Toast.makeText(SachActivity.this, "Nhap ten tac gia", Toast.LENGTH_SHORT).show();
-//                }
                 int tienThue = Integer.parseInt(edtTienthue.getText().toString());
-
                 int theLoai =  Integer.parseInt(edttheloai.getText().toString());
 
                 Sach sach1 = new Sach(sach.getMasach(),tenSach,tacGia,tienThue,theLoai, sach.getTenloai());
@@ -177,25 +163,13 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder>{
                 }else {
                     Toast.makeText(context, "Cap nhat that bai", Toast.LENGTH_SHORT).show();
                 }
-
-
-//
-//                if (check){
-//                    Toast.makeText(SachActivity.this, "Them thanh cong", Toast.LENGTH_SHORT).show();
-//                    loadSach();
-//                    alertDialog.dismiss();
-//                }else {
-//                    Toast.makeText(SachActivity.this, "Them that bai", Toast.LENGTH_SHORT).show();
-//                }
-
-
             }
         });
             }
             private  void loaddata(){
-        list.clear();
-        list.addAll(sachDAO.getDSSach());
-        notifyDataSetChanged();
+                list.clear();
+                list.addAll(sachDAO.getDSSach());
+                notifyDataSetChanged();
             }
     }
 

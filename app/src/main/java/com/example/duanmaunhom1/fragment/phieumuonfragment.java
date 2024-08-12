@@ -86,11 +86,11 @@ public class phieumuonfragment extends Fragment {
                 boolean check = phieuMuonDAO.thempm(ngaymuon,ngaytra,maNguoiMuon);
 
                 if (check){
-                    Toast.makeText(getContext(), "Them thanh cong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Thêm thành công", Toast.LENGTH_SHORT).show();
                     loadqlphiuemuon();
                     alertDialog.dismiss();
                 }else {
-                    Toast.makeText(getContext(), "Them that bai", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Thêm thất bại", Toast.LENGTH_SHORT).show();
                 }
 
 

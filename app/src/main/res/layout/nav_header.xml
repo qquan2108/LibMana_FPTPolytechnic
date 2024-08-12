@@ -24,32 +24,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Thư viện "
-                android:textStyle="bold"
                 android:textColor="#B81A1A"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="LibMana "
+                android:text="Phương Nam"
                 android:textStyle="bold"
                 android:textColor="#B81A1A"
                 android:textSize="30dp" />
 
             <TextView
                 android:layout_marginLeft="20dp"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textColor="#B81A1A"
-
+                android:gravity="center"
                 android:text="Xin chào "
                 android:textSize="30dp" />
         </LinearLayout>

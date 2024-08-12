@@ -19,7 +19,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Vui long nhap so dien thoai" />
+        android:text="Nhập số điện thoại" />
 
     <EditText
         android:id="@+id/editText"
@@ -27,12 +27,12 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:hint="So dien thoai" />
+        android:hint="Số điện thoại" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Verify Phone" />
+        android:text="Xác thực" />
 
 </LinearLayout>

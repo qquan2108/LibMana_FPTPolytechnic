@@ -39,7 +39,7 @@ public class CTPM extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("Thư viện LibMana");
+        getSupportActionBar().setTitle("Thư viện Phương Nam");
 
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
@@ -55,24 +55,23 @@ public class CTPM extends AppCompatActivity {
         FloatingActionButton floatadd = findViewById(R.id.themmoi);
         FloatingActionButton filterReturned = findViewById(R.id.filterReturned); // FloatingActionButton để lọc các phiếu mượn đã trả
         CTPMDAO = new ChiTietpmDAO(this);
-        loadCTPM(CTPMDAO.getCTPM()); // Tải danh sách phiếu mượn
+        loadCTPM(CTPMDAO.getCTPM());
 
         floatadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showdailogctpt(); // Hiển thị dialog thêm phiếu mượn mới
+                showdailogctpt();
             }
         });
 
         filterReturned.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                filterListByReturned(); // Lọc danh sách các phiếu mượn đã trả
+                filterListByReturned();
             }
         });
     }
 
-    // Hàm để tải danh sách phiếu mượn lên RecyclerView
     private void loadCTPM(List<CTPhieuMuon> list) {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerCTPM.setLayoutManager(linearLayoutManager);
@@ -80,18 +79,16 @@ public class CTPM extends AppCompatActivity {
         recyclerCTPM.setAdapter(adapter);
     }
 
-    // Hàm để lọc các phiếu mượn đã trả
     private void filterListByReturned() {
         filteredList.clear(); // Xóa danh sách lọc hiện tại
         for (CTPhieuMuon chiTietPhieuMuon : CTPMDAO.getCTPM()) {
-            if (chiTietPhieuMuon.getTrasach()== 0) { // Kiểm tra trạng thái trả sách
-                filteredList.add(chiTietPhieuMuon); // Thêm phiếu mượn đã trả vào danh sách lọc
+            if (chiTietPhieuMuon.getTrasach()== 0) {
+                filteredList.add(chiTietPhieuMuon);
             }
         }
-        loadCTPM(filteredList); // Cập nhật RecyclerView với danh sách đã lọc
+        loadCTPM(filteredList);
     }
 
-    // Hàm để hiển thị dialog thêm phiếu mượn mới
     public void showdailogctpt() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();
@@ -116,12 +113,11 @@ public class CTPM extends AppCompatActivity {
                 int masach = Integer.parseInt(etmasach.getText().toString());
                 int soluong = Integer.parseInt(etsoluong.getText().toString());
 
-                // Kiểm tra và thêm chi tiết phiếu mượn
                 boolean check = CTPMDAO.themctpm(mapm, masach, soluong);
 
                 if (check) {
                     Toast.makeText(CTPM.this, "Thêm thành công", Toast.LENGTH_SHORT).show();
-                    loadCTPM(CTPMDAO.getCTPM()); // Tải lại danh sách phiếu mượn
+                    loadCTPM(CTPMDAO.getCTPM());
                     alertDialog.dismiss();
                 } else {
                     Toast.makeText(CTPM.this, "Thêm thất bại", Toast.LENGTH_SHORT).show();
@@ -132,7 +128,7 @@ public class CTPM extends AppCompatActivity {
         btnhuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                alertDialog.dismiss(); // Đóng dialog
+                alertDialog.dismiss();
             }
         });
     }

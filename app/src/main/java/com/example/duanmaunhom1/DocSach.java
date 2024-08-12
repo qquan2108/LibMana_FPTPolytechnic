@@ -27,7 +27,7 @@ TabLayout tabLayout;
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("Thư viện LibMana");
+        getSupportActionBar().setTitle("Thư viện Phương Nam");
 
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 

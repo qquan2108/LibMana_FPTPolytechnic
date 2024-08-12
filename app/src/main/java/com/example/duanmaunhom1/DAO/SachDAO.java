@@ -15,12 +15,10 @@ public class SachDAO {
     public SachDAO(Context context){
         dbHelper = new DbHelper(context);
     }
-    // LAY DANH SACH CAC CUON SACH
+
     public ArrayList<Sach> getDSSach(){
         ArrayList<Sach> list = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
-        // SELECT s.masach, s.tensach, s.tacgia, s.giaban, s.maloai, l.tenloai  FROM SACH s , LOAISACH l WHERE s.maloai = l.maloai
-
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT s.masach, s.tensach, s.tacgia, s.giaban, s.maloai, l.tenloai  FROM SACH s , LOAISACH l WHERE s.maloai = l.maloai",null);
         if (cursor.getCount() > 0){
             cursor.moveToFirst();
@@ -66,7 +64,6 @@ public class SachDAO {
     }
     public int xoassach(int masach){
         SQLiteDatabase sqLiteDatabase= dbHelper.getWritableDatabase();
-        // kiem tra su ton tai cua nhung cuon sach trong bang sach voi the loai dang thuc hien xoa
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM CTPM WHERE masach = ?",new String[]{String.valueOf(masach)});
         if (cursor.getCount() > 0){
             return 0;

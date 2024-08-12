@@ -33,11 +33,11 @@ public class Dangky extends AppCompatActivity {
         ettennguoidung = findViewById(R.id.ettennguoidung);
         btdangky = findViewById(R.id.btdangky);
         nguoiDungDAO = new NguoiDungDAO(this);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle("Đăng kí tài khoản");
-
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         toolbar.setNavigationIcon(R.drawable.back);

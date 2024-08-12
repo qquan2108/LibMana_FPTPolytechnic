@@ -19,7 +19,8 @@
         android:id="@+id/tvNhapOTP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Vui long nhap OTP" />
+        android:textSize="20dp"
+        android:text="Vui lòng nhập mã OTP để xác thực tài khoản." />
 
     <EditText
         android:id="@+id/etOTP"
@@ -27,18 +28,49 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:hint="OTP Code" />
+        android:hint="Mã xác thực" />
 
     <Button
         android:id="@+id/btnVerify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Verify" />
+        android:text="Xác thực" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/tvOr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:hint="Hoặc" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="?android:attr/listDivider" />
+
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/tvResendOTP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ban khong nhan duoc ma OTP?" />
+        android:gravity="center"
+        android:textSize="15dp"
+        android:text="Bạn không nhận được mã OTP?" />
 
 </LinearLayout>

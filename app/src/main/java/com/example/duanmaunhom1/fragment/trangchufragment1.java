@@ -88,7 +88,8 @@ public class trangchufragment1 extends Fragment {
         if (userName != null) {
             txtXinChao.setText("Xin chào, " + userName);
         } else {
-            txtXinChao.setText("Không tìm thấy người dùng");
+            txtXinChao.setText("");
+            Log.d("trangchu", "Không tìm thấy người dùng với tên đăng nhập: " + loginName);
         }
 
       dangxuat.setOnClickListener(new View.OnClickListener() {

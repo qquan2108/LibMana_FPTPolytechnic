@@ -38,7 +38,7 @@ public class verify_phone extends AppCompatActivity {
         setContentView(R.layout.activity_verify_phone);
 
         setTitleToolbar();
-        iniUi();
+        initUi();
         mAuth = FirebaseAuth.getInstance();
 
         // Lấy số điện thoại từ Intent
@@ -69,11 +69,11 @@ public class verify_phone extends AppCompatActivity {
 
     private void setTitleToolbar() {
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Verify Phone");
+            getSupportActionBar().setTitle("Xác thực số điện thoại");
         }
     }
 
-    private void iniUi() {
+    private void initUi() {
         editText = findViewById(R.id.editText);
         button = findViewById(R.id.button);
     }
@@ -91,7 +91,7 @@ public class verify_phone extends AppCompatActivity {
 
                     @Override
                     public void onVerificationFailed(@NonNull FirebaseException e) {
-                        Toast.makeText(verify_phone.this, "Verify Failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(verify_phone.this, "Xác thực thất bại", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -121,7 +121,7 @@ public class verify_phone extends AppCompatActivity {
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
                                 // The verification code entered was invalid
-                                Toast.makeText(verify_phone.this, "Invalid OTP", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(verify_phone.this, "Mã OTP không đúng", Toast.LENGTH_SHORT).show();
                             }
                         }
                     }

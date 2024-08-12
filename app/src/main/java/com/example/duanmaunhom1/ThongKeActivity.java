@@ -30,12 +30,13 @@ public class ThongKeActivity extends AppCompatActivity {
         EditText edend=findViewById(R.id.edend);
         Button btthongke=findViewById(R.id.btthongke);
         TextView txtketqua=findViewById(R.id.tvketqua);
+
         Calendar calendar = Calendar.getInstance();
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("Thư viện LibMana");
-
+        getSupportActionBar().setTitle("Thư viện Phương Nam");
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         toolbar.setNavigationIcon(R.drawable.back);
@@ -103,8 +104,6 @@ public class ThongKeActivity extends AppCompatActivity {
                             thang = String.valueOf((month +1));
                         }
                         edend.setText(year+"/"+thang +"/"+ ngay);
-
-
                     }
                 },
                         calendar.get(Calendar.YEAR),
@@ -116,6 +115,7 @@ public class ThongKeActivity extends AppCompatActivity {
 
             }
         });
+
         btthongke.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -123,12 +123,8 @@ public class ThongKeActivity extends AppCompatActivity {
                 String ngaybatdau = edstarst.getText().toString();
                 String ngayketthuc = edend.getText().toString();
                 int nguoimuon = thongkeDAO.getDoanhThu(ngaybatdau,ngayketthuc);
-                txtketqua.setText(nguoimuon + " Người mượn");
+                txtketqua.setText("Có " + nguoimuon + " người mượn");
             }
         });
-
-
-
-
     }
 }

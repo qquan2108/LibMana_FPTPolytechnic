@@ -84,7 +84,7 @@ public class EnterOTP extends AppCompatActivity {
 
     private void setTitleToolbar() {
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Enter OTP");
+            getSupportActionBar().setTitle("Nhập mã xác thực");
         }
     }
 
@@ -113,7 +113,7 @@ public class EnterOTP extends AppCompatActivity {
 
                     @Override
                     public void onVerificationFailed(@NonNull FirebaseException e) {
-                        Toast.makeText(EnterOTP.this, "Verify Failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EnterOTP.this, "Xác thực thất bại", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -145,7 +145,7 @@ public class EnterOTP extends AppCompatActivity {
                         } else {
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
-                                Toast.makeText(EnterOTP.this, "Invalid OTP", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EnterOTP.this, "Mã OTP không đúng", Toast.LENGTH_SHORT).show();
                             }
                         }
                     }

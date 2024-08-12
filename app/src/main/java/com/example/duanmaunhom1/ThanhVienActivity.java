@@ -30,7 +30,7 @@ public class ThanhVienActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("Thư viện LibMana");
+        getSupportActionBar().setTitle("Thư viện Phương Nam");
 
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
@@ -87,43 +87,42 @@ public class ThanhVienActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String tennd = edtten.getText().toString();
-                if (tennd.equals("")){
-                   Toast.makeText(ThanhVienActivity.this, "Nhap ten thanh vien", Toast.LENGTH_SHORT).show();
-                   return;
+                if (tennd.equals("")) {
+                    Toast.makeText(ThanhVienActivity.this, "Nhập tên thành viên", Toast.LENGTH_SHORT).show();
+                    return;
                 }
                 String sdt = etsdt.getText().toString();
-                if (sdt.equals("")){
-                    Toast.makeText(ThanhVienActivity.this, "Nhap so dien thoai", Toast.LENGTH_SHORT).show();
+                if (sdt.equals("")) {
+                    Toast.makeText(ThanhVienActivity.this, "Nhập số điện thoại", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 String diachi = etdiachi.getText().toString();
-                if (diachi.equals("")){
-                    Toast.makeText(ThanhVienActivity.this, "Nhap dia chi ", Toast.LENGTH_SHORT).show();
+                if (diachi.equals("")) {
+                    Toast.makeText(ThanhVienActivity.this, "Nhập địa chỉ", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 String tendangnhap = ettendangnhap.getText().toString();
-                if (tendangnhap.equals("")){
-                    Toast.makeText(ThanhVienActivity.this, "Nhap ten dang nhap", Toast.LENGTH_SHORT).show();
+                if (tendangnhap.equals("")) {
+                    Toast.makeText(ThanhVienActivity.this, "Nhập tên đăng nhập", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 String matkhau = etmatkhau.getText().toString();
-                if (matkhau.equals("")){
-                    Toast.makeText(ThanhVienActivity.this, "nhap mat khau", Toast.LENGTH_SHORT).show();
+                if (matkhau.equals("")) {
+                    Toast.makeText(ThanhVienActivity.this, "Nhập mật khẩu", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
                 int vaitro = Integer.parseInt(etvaitro.getText().toString());
 
+                boolean check = thanhVienDAO.themthanhvien(tennd, sdt, diachi, tendangnhap, matkhau, vaitro);
 
-                boolean check = thanhVienDAO.themthanhvien(tennd,sdt,diachi,tendangnhap,matkhau,vaitro);
-
-                if (check){
-                    Toast.makeText(ThanhVienActivity.this, "Them thanh cong", Toast.LENGTH_SHORT).show();
+                if (check) {
+                    Toast.makeText(ThanhVienActivity.this, "Thêm thành công", Toast.LENGTH_SHORT).show();
                     loathanhvien();
                     alertDialog.dismiss();
-                }else {
-                    Toast.makeText(ThanhVienActivity.this, "Them that bai", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(ThanhVienActivity.this, "Thêm thất bại", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
         bthuy.setOnClickListener(new View.OnClickListener() {

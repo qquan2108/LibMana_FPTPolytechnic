@@ -51,12 +51,14 @@ public class ThanhVienAdapter extends RecyclerView.Adapter<ThanhVienAdapter.View
         holder.txtTenDangNhap.setText("Tên đăng nhập: " + list.get(position).getTendangnhap());
         holder.txtMatKhau.setText("Mật khẩu: " + list.get(position).getMatkhau());
         holder.txtrole.setText("Vai trò: " + list.get(position).getRole());
+
         holder.ivEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showdailogupdate(list.get(holder.getAdapterPosition()));
             }
         });
+
         holder.ivDele.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,6 +118,7 @@ public class ThanhVienAdapter extends RecyclerView.Adapter<ThanhVienAdapter.View
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         alertDialog.setCancelable(false);
         alertDialog.show();
+
         TextView tvtitle = view.findViewById(R.id.txttieude);
         EditText edtten = view.findViewById(R.id.ettennd);
         EditText etsdt = view.findViewById(R.id.etsdt);
@@ -127,7 +130,8 @@ public class ThanhVienAdapter extends RecyclerView.Adapter<ThanhVienAdapter.View
         Button bthuy = view.findViewById(R.id.bthuy);
 
         tvtitle.setText("Sửa Thanh vien");
-        btluu.setText("cap nhat");
+        btluu.setText("Cập nhật");
+
         edtten.setText(nd.getTennd());
         etsdt.setText(nd.getSdt());
         etdiachi.setText(nd.getDiachi());
@@ -168,11 +172,11 @@ public class ThanhVienAdapter extends RecyclerView.Adapter<ThanhVienAdapter.View
                 NguoiDung nguoiDungupdate = new NguoiDung(nd.getMand(), tennd, sdt, diachi, tendangnhap, matkhau, vaitro, false);
                 boolean check = thanhVienDAO.suathanhvien(nguoiDungupdate);
                 if (check){
-                    Toast.makeText(context, "cap nhat thanh cong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Cập nhật thành công", Toast.LENGTH_SHORT).show();
                     loaddata();
                     alertDialog.dismiss();
                 }else {
-                    Toast.makeText(context, "cập nhật thất bại", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Cập nhật thất bại", Toast.LENGTH_SHORT).show();
                 }
             }
 

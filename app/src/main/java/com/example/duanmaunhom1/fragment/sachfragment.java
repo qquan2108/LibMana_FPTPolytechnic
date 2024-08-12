@@ -87,12 +87,12 @@ public class sachfragment extends Fragment {
             public void onClick(View v) {
                 String tenSach = edtTenSach.getText().toString();
                 if (tenSach.equals("")){
-                    Toast.makeText(getContext(), "Nhap ten sach", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Chưa nhập tên sách", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 String tacGia = edTacGia.getText().toString();
                 if (tacGia.equals("")){
-                    Toast.makeText(getContext(), "Nhap ten tac gia", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Chưa nhập tên tác giả", Toast.LENGTH_SHORT).show();
                 }
                 int tienThue = Integer.parseInt(edtTienthue.getText().toString());
 
@@ -103,11 +103,11 @@ public class sachfragment extends Fragment {
                 boolean check = sachDAO.themSach(tenSach,tacGia,tienThue,theLoai);
 
                 if (check){
-                    Toast.makeText(getContext(), "Them thanh cong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Thêm thành công", Toast.LENGTH_SHORT).show();
                     loadSach();
                     alertDialog.dismiss();
                 }else {
-                    Toast.makeText(getContext(), "Them that bai", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Thêm thất bại", Toast.LENGTH_SHORT).show();
                 }
 
 

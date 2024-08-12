@@ -54,52 +54,15 @@ public class ChangePassFragment extends Fragment {
                     ThanhVienDAO thanhVienDAO = new ThanhVienDAO(getContext());
                     boolean check =thanhVienDAO.capnhatmatkhau(tendangnhap,oldpass,newpass);
                     if (check){
-                        Toast.makeText(getContext(), "Cap nhat thanh cong", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Cập nhật thành công", Toast.LENGTH_SHORT).show();
                     }
                 }else {
-                    Toast.makeText(getContext(), "Nhap mat khau khong trung nhau", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Mật khẩu không khớp", Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
-
-
-
-//        btsave.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                SharedPreferences pred = getActivity().getSharedPreferences("User_file", Context.MODE_PRIVATE);
-//                String pass0ld = pred.getString("PASSWORD","");
-//                if (validate()>0){
-//                    ThanhVien thanhVien = thanhVienDAO.getID(user);
-//                    thanhVien.setMatkhau(edpass.getText().toString());
-//
-//                    thanhVienDAO.updatepass(thanhVien);
-//                }
-//            }
-//        });
         return v;
            }
 
-//            public int validate() {
-//                int check = 1;
-//                if (edpass0ld.getText().length() == 0 || edpass.getText().length() == 0 || edrepass.getText().length() == 0) {
-//                    Toast.makeText(getContext(), "Ban phai nhap day du thong tin", Toast.LENGTH_SHORT).show();
-//                    check = -1;
-//                } else {
-//                    SharedPreferences pred = getActivity().getSharedPreferences("User_file", Context.MODE_PRIVATE);
-//                    String pass0ld = pred.getString("PASSWORD", "");
-//                    String pass = edpass.getText().toString();
-//                    String repass = edrepass.getText().toString();
-//                    if (!pass0ld.equals(edpass0ld.getText().toString())) {
-//                        Toast.makeText(getContext(), "Mat khau cu sai ", Toast.LENGTH_SHORT).show();
-//                        check = -1;
-//                    }
-//                    if (!pass.equals(repass)) {
-//                        Toast.makeText(getContext(), "Mat khau khong trung nhau", Toast.LENGTH_SHORT).show();
-//                        check = -1;
-//                    }
-//                }
-//                return check;
-//            }
         }

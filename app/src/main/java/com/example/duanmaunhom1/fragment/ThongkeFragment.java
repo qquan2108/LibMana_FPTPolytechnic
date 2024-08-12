@@ -111,7 +111,7 @@ public class ThongkeFragment extends Fragment {
             String ngaybatdau = edstarst.getText().toString();
             String ngayketthuc = edend.getText().toString();
             int nguoimuon = thongkeDAO.getDoanhThu(ngaybatdau,ngayketthuc);
-            txtketqua.setText(nguoimuon + " Người mượn");
+            txtketqua.setText("Có" + nguoimuon + " người mượn");
         }
     });
 

@@ -84,27 +84,27 @@ public class thanhvienfragment extends Fragment {
             public void onClick(View v) {
                 String tennd = edtten.getText().toString();
                 if (tennd.equals("")){
-                    Toast.makeText(getContext(), "Nhap ten thanh vien", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Chưa nhập tên thành viên", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 String sdt = etsdt.getText().toString();
                 if (sdt.equals("")){
-                    Toast.makeText(getContext(), "Nhap so dien thoai", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Chưa nhập số điện thoại", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 String diachi = etdiachi.getText().toString();
                 if (diachi.equals("")){
-                    Toast.makeText(getContext(), "Nhap dia chi ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Chưa nhập địa chỉ", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 String tendangnhap = ettendangnhap.getText().toString();
                 if (tendangnhap.equals("")){
-                    Toast.makeText(getContext(), "Nhap ten dang nhap", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Chưa nhập tên đăng nhập", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 String matkhau = etmatkhau.getText().toString();
                 if (matkhau.equals("")){
-                    Toast.makeText(getContext(), "nhap mat khau", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Chưa nhập mật khẩu", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 int vaitro = Integer.parseInt(etvaitro.getText().toString());
@@ -113,11 +113,11 @@ public class thanhvienfragment extends Fragment {
                 boolean check = thanhVienDAO.themthanhvien(tennd,sdt,diachi,tendangnhap,matkhau,vaitro);
 
                 if (check){
-                    Toast.makeText(getContext(), "Them thanh cong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Thêm thành công", Toast.LENGTH_SHORT).show();
                     loathanhvien();
                     alertDialog.dismiss();
                 }else {
-                    Toast.makeText(getContext(), "Them that bai", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Thêm thất bại", Toast.LENGTH_SHORT).show();
                 }
 
             }

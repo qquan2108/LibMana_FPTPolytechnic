@@ -80,11 +80,11 @@ public class ctmpfragment extends Fragment {
                 boolean check = CTPMDAO.themctpm(mapm,masach,soluong);
 
                 if (check){
-                    Toast.makeText(getContext(), "Them thanh cong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Thêm thành công", Toast.LENGTH_SHORT).show();
                     loadCTPM();
                     alertDialog.dismiss();
                 }else {
-                    Toast.makeText(getContext(), "Them that bai", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Thêm thất bại", Toast.LENGTH_SHORT).show();
                 }
 
             }
